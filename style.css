@@ -1,0 +1,130 @@
+
+body {
+    color: rgb(255, 255, 255);
+    background: linear-gradient( black, rgb(1, 1, 22));
+    font-family: 'Times New Roman', Times, serif;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between ;
+    list-style-type: none;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+ul li a {
+    padding: 0px 40px 0px 0px;
+}
+
+header div img {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%; 
+}
+
+img {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 500px;
+ 
+}
+.titles {
+    text-align: center;
+    list-style-type: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(5, 5, 56);
+    padding: 20px 20px 30px 40px;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    background-color: rgb(5, 5, 56);
+    padding: 24px 500px;
+}
+
+.center{
+    text-align: center;
+}
+
+.container {
+    padding: 10px 200px;
+} 
+
+.subtittle {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(5, 5, 56);
+    justify-content: center;
+    padding: 10px 0px 10px 500px;
+}
+nav button a {
+    color: white;
+
+}
+
+nav button a:hover {
+    color:rgb(5, 5, 56);
+    background-color: white;
+}
+
+button:hover {
+    color: rgb(5, 5, 56);
+    background-color: white;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+button {
+    color: white;
+
+
+}
+.contact {
+    align-items: center;;
+    justify-items: center;
+    text-align: center;
+    justify-content: space-between;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(5, 5, 56);
+    padding: 10px 0px 10px 100px;
+}
+
+.subcontact {
+    align-items: center;;
+    justify-items: center;
+    text-align: center;
+    justify-content: space-between;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(5, 5, 56);
+    padding: 0px 0px 0px 20px;
+}
+
+.galery {
+    width: 36rem;
+    height: 23rem;
+    position: relative;
+    display: flex;
+    overflow: auto;
+}
+@media screen and (max-width: 1020px){
+    .container .img{
+        display: none;
+        flex-direction: column;
+        font-size: 30px;
+        line-height: 40px;
+    }
+    
+}
