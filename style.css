@@ -43,14 +43,14 @@ img {
     display: flex;
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
-    background-color: rgb(5, 5, 56);
+    background-color: rgb(49, 81, 126);
     padding: 20px 20px 30px 40px;
 }
 
 .intro {
     display: flex;
     align-items: center;
-    background-color: rgb(5, 5, 56);
+    background-color: rgb(49, 81, 126);
     padding: 24px 500px;
 }
 
@@ -65,7 +65,7 @@ img {
 .subtittle {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    background-color: rgb(5, 5, 56);
+    background-color: rgb(49, 81, 126);
     justify-content: center;
     padding: 10px 0px 10px 500px;
 }
@@ -98,7 +98,7 @@ button {
     text-align: center;
     justify-content: space-between;
     font-family: 'Times New Roman', Times, serif;
-    background-color: rgb(5, 5, 56);
+    background-color: rgb(49, 81, 126);
     padding: 10px 0px 10px 100px;
 }
 
@@ -108,7 +108,7 @@ button {
     text-align: center;
     justify-content: space-between;
     font-family: 'Times New Roman', Times, serif;
-    background-color: rgb(5, 5, 56);
+    background-color: rgb(49, 81, 126);
     padding: 0px 0px 0px 20px;
 }
 
