@@ -7,9 +7,11 @@
   
   body {
     color: white;
-    background: linear-gradient(black, rgb(63, 76, 94));
+    background-image: url(./img/eolica.jpg);
     font-family: 'Times New Roman', Times, serif;
     line-height: 1.6;
+    height: 98vh;
+    background-position: center center;
   }
   
   /* Navegação */
