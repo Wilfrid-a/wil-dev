@@ -337,6 +337,7 @@
     flex: 1 1 300px;
     color: #f1f1f1;
     font-size: 1rem;
+    text-align: left;
   }
   @media (max-width: 768px) {
     .experience-haus {
