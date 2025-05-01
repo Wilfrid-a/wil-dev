@@ -287,7 +287,7 @@
   object-fit: cover;
   opacity: 0;
   transition: opacity 3s ease-in-out;
-}
+} 
 
 .experience-eurobike .carousel img.active {
   opacity: 1;
@@ -337,13 +337,12 @@
     flex: 1 1 300px;
     color: #f1f1f1;
     font-size: 1rem;
-    text-align: left;
   }
   @media (max-width: 768px) {
     .experience-haus {
       flex-direction: column;
       align-items: center;
-      text-align: left;
+      text-align: center;
     }
   
     .haus-text {
