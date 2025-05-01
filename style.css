@@ -271,7 +271,7 @@
 .experience-eurobike .carousel {
   flex: 1 1 350px;
   max-width: 600px;
-  height: 350px;
+  height: 600px;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
@@ -310,7 +310,7 @@
   .experience-haus .carousel {
     flex: 1 1 350px;
     max-width: 600px;
-    height: 350px;
+    height: 600px;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
