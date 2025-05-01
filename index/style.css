@@ -1,6 +1,6 @@
 /* Reset básico */
 * {
-    margin: 0;
+    margin: 10px;
     padding: 0;
     box-sizing: border-box;
   }
@@ -39,9 +39,9 @@
   }
   
   embed {
-    width: 100%;
-    max-width: 900px;
-    height: 80vh; /* Altura adaptável à tela */
+    width: 1000%;
+    max-width: 320px;
+    height: 230px;
     border: 5px solid #0077b5;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -49,26 +49,22 @@
   
   /* Responsividade */
   @media (max-width: 768px) {
-    .content h1 {
-      font-size: 2em;
+    embed {
+      height: 400px;
     }
   
-    embed {
-      height: 60vh;
-      max-width: 100%;
+    .content h1 {
+      font-size: 2em;
     }
   }
   
   @media (max-width: 480px) {
+    embed {
+      height: 300px;
+      max-width: 100%;
+    }
+  
     .content {
       padding: 15px;
-    }
-  
-    embed {
-      height: 50vh;
-    }
-  
-    .content h1 {
-      font-size: 1.6em;
     }
   }
