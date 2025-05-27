@@ -21,11 +21,11 @@
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     gap: 2rem;
     list-style: none;
     flex-wrap: wrap;
-    padding: 5px 20px;
+    padding: 1rem 0;
     background-color: rgba(0, 0, 0, 0.9); /* Fundo escuro com transparência */
     z-index: 1000; /* Fica acima de tudo */
     backdrop-filter: blur(5px); /* Efeito de desfoque moderno */
