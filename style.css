@@ -11,7 +11,11 @@
     font-family: 'Times New Roman', Times, serif;
     line-height: 1.6;
     height: 98vh;
-    background-position: center center;
+    background-position: center t;
+    background-attachment: fixed;
+  }
+  main {
+    margin: auto;
   }
   
   /* Navegação */
@@ -74,6 +78,7 @@
     justify-content: center;
     gap: 2rem;
     background-color: rgba(49, 81, 126, 0.9);
+    box-shadow: 5px 5px 15px rgba(49, 81, 126, 0.9);
     padding: 2rem;
     margin-bottom: 2rem;
     border-radius: 10px;
@@ -111,6 +116,7 @@
     padding: 2rem;
     margin-bottom: 1.5rem;
     border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(49, 81, 126, 0.9);
   }
   
   .content h2,
