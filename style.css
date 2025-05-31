@@ -13,6 +13,7 @@
     height: 98vh;
     background-position: center t;
     background-attachment: fixed;
+    font-size: 1em;
   }
   main {
     margin: auto;
