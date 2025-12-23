@@ -1,0 +1,101 @@
+/* ===== VARIÁVEIS DE CORES ===== */
+:root {
+  --bg-main: #0f172a;        /* azul escuro */
+  --bg-card: #111827;       /* cinza azulado */
+  --primary: #2563eb;       /* azul moderno */
+  --secondary: #38bdf8;     /* azul claro */
+  --text-main: #e5e7eb;     /* texto claro */
+  --text-muted: #9ca3af;    /* texto secundário */
+  --accent: #22c55e;        /* verde sutil */
+}
+
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+body {
+  background: linear-gradient(180deg, #020617, var(--bg-main));
+  color: var(--text-main);
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  line-height: 1.7;
+  padding: 40px 20px;
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+body > div {
+  max-width: 900px;
+  margin: auto;
+  background-color: var(--bg-card);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== TÍTULO PRINCIPAL ===== */
+h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary);
+  text-align: center;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--primary), transparent);
+  margin: 20px 0 40px;
+}
+
+/* ===== SUBTÍTULOS ===== */
+h2 {
+  margin-top: 40px;
+  font-size: 1.6rem;
+  color: var(--secondary);
+  border-left: 5px solid var(--primary);
+  padding-left: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== IMAGENS ===== */
+div img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 15px 0 20px;
+  background-color: #020617;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+div img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+/* ===== PARÁGRAFOS ===== */
+p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+/* ===== EFEITO DE SEÇÃO ===== */
+h2 + div + p {
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  body > div {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
