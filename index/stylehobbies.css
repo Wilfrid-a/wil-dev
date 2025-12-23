@@ -1,106 +1,87 @@
-/* ===== VARIÁVEIS DE CORES (NOVA PALETA) ===== */
+/* ===== VARIÁVEIS DE CORES (SPACE 16-BITS) ===== */
 :root {
-  --bg-main: linear-gradient(to right, #e0eafc, #cfdef3);
+  --bg-space: #020617;
   --bg-card: #ffffffde;
-  --primary: #005f8d;
-  --secondary: #0077b5;
-  --text-main: #333333;
-  --text-muted: #555555;
+  --primary: #38bdf8;
+  --secondary: #60a5fa;
+  --text-main: #ffffff;
+  --text-muted: #aaaaaa;
   --border-light: rgba(0, 0, 0, 0.1);
+  --text-shadow: rgba(0, 0, 0, 0.5); /* sombra semi-transparente */
 }
 
 /* ===== CONFIGURAÇÕES GERAIS ===== */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: var(--bg-main);
   color: var(--text-main);
   line-height: 1.7;
-  padding: 40px 20px;
+  margin: 0; /* remover margin padrão */
+  padding: 20px; /* padding mínimo */
+  background-color: var(--bg-space);
+  position: relative;
+  overflow-x: hidden;
+  text-shadow: 2px 2px 6px var(--text-shadow); /* sombra atrás do texto */
+
+  /* Flexbox para posicionar conteúdo */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza horizontal */
+  justify-content: flex-start; /* mantém no topo */
+  min-height: 100vh; /* garante que ocupe toda a tela */
 }
 
-/* ===== CONTAINER PRINCIPAL ===== */
-body > div {
-  max-width: 1000px;
-  margin: auto;
-  background-color: var(--bg-card);
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+/* Sombras específicas para títulos */
+h1, h2, h3, h4, h5, h6 {
+  text-shadow: 3px 3px 8px var(--text-shadow);
 }
 
-/* ===== TÍTULO PRINCIPAL ===== */
-h1 {
-  font-size: 2.8rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--primary);
-  text-align: center;
+/* ===== FUNDO ESTRELADO 16-BITS ===== */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    /* estrelas pequenas */
+    radial-gradient(#ffffff 1px, transparent 1px),
+    /* estrelas médias */
+    radial-gradient(#9bdcff 2px, transparent 2px),
+    /* estrelas grandes */
+    radial-gradient(#e0f2fe 3px, transparent 3px),
+    /* fundo espacial */
+    linear-gradient(180deg, #020617, #020617, #020617);
+
+  background-size:
+    20px 20px,
+    40px 40px,
+    80px 80px,
+    cover;
+
+  background-position:
+    0 0,
+    10px 10px,
+    20px 20px,
+    center;
+
+  image-rendering: pixelated;
+  animation: starsMove 60s linear infinite;
 }
 
-hr {
-  border: none;
-  height: 2px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--secondary),
-    transparent
-  );
-  margin: 20px 0 40px;
-}
-
-/* ===== SUBTÍTULOS ===== */
-h2 {
-  margin-top: 40px;
-  font-size: 1.5rem;
-  color: var(--secondary);
-  border-left: 5px solid var(--primary);
-  padding-left: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* ===== IMAGENS ===== */
-div img {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin: 15px 0 20px;
-  border: 4px solid var(--secondary);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-div img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 25px rgba(0, 119, 181, 0.35);
-}
-
-/* ===== PARÁGRAFOS ===== */
-p {
-  color: var(--text-muted);
-  font-size: 1.05rem;
-  text-align: justify;
-}
-
-/* ===== SEPARADOR ENTRE SEÇÕES ===== */
-h2 + div + p {
-  padding-bottom: 30px;
-  border-bottom: 1px solid var(--border-light);
-}
-
-/* ===== RESPONSIVIDADE ===== */
-@media (max-width: 768px) {
-  body > div {
-    padding: 20px;
+/* ===== ANIMAÇÃO SUAVE (SPACE GAME) ===== */
+@keyframes starsMove {
+  from {
+    background-position:
+      0 0,
+      10px 10px,
+      20px 20px,
+      center;
   }
-
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  h2 {
-    font-size: 1.3rem;
+  to {
+    background-position:
+      0 1000px,
+      10px 800px,
+      20px 600px,
+      center;
   }
 }
