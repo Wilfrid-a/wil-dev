@@ -1,7 +1,7 @@
 /* ===== VARIÁVEIS DE CORES (SPACE 16-BITS) ===== */
 :root {
   --bg-space: #020617;
-  --bg-card: #ffffffde;
+  --bg-card: rgba(255, 255, 255, 0.2); /* fundo translúcido */
   --primary: #38bdf8;
   --secondary: #60a5fa;
   --text-main: #ffffff;
@@ -15,19 +15,28 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-main);
   line-height: 1.7;
-  margin: 0; /* remover margin padrão */
-  padding: 20px; /* padding mínimo */
+  margin: 0;
+  padding: 20px;
   background-color: var(--bg-space);
   position: relative;
   overflow-x: hidden;
-  text-shadow: 2px 2px 6px var(--text-shadow); /* sombra atrás do texto */
+  text-shadow: 2px 2px 6px var(--text-shadow);
 
-  /* Flexbox para posicionar conteúdo */
+  /* Flexbox para posicionamento */
   display: flex;
   flex-direction: column;
-  align-items: center; /* centraliza horizontal */
-  justify-content: flex-start; /* mantém no topo */
-  min-height: 100vh; /* garante que ocupe toda a tela */
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+/* Caixa translúcida atrás do texto */
+.text-box {
+  background-color: var(--bg-card); /* fundo translúcido */
+  padding: 15px 25px;
+  border-radius: 8px;
+  text-align: center;
+  backdrop-filter: blur(6px); /* efeito blur por trás */
 }
 
 /* Sombras específicas para títulos */
@@ -43,13 +52,9 @@ body::before {
   z-index: -1;
 
   background:
-    /* estrelas pequenas */
     radial-gradient(#ffffff 1px, transparent 1px),
-    /* estrelas médias */
     radial-gradient(#9bdcff 2px, transparent 2px),
-    /* estrelas grandes */
     radial-gradient(#e0f2fe 3px, transparent 3px),
-    /* fundo espacial */
     linear-gradient(180deg, #020617, #020617, #020617);
 
   background-size:
