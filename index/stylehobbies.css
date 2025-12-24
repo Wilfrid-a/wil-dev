@@ -1,13 +1,20 @@
 /* ===== VARIÁVEIS DE CORES (SPACE 16-BITS) ===== */
 :root {
   --bg-space: #020617;
-  --bg-card: rgba(255, 255, 255, 0.2); /* fundo translúcido */
+  --bg-card: rgba(255, 255, 255, 0.2);
   --primary: #38bdf8;
   --secondary: #60a5fa;
   --text-main: #ffffff;
   --text-muted: #aaaaaa;
   --border-light: rgba(0, 0, 0, 0.1);
-  --text-shadow: rgba(0, 0, 0, 0.5); /* sombra semi-transparente */
+  --text-shadow: rgba(0, 0, 0, 0.5);
+}
+
+/* ===== RESET BÁSICO ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* ===== CONFIGURAÇÕES GERAIS ===== */
@@ -15,33 +22,84 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-main);
   line-height: 1.7;
-  margin: 0;
   padding: 20px;
   background-color: var(--bg-space);
   position: relative;
   overflow-x: hidden;
   text-shadow: 2px 2px 6px var(--text-shadow);
 
-  /* Flexbox para posicionamento */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   min-height: 100vh;
 }
 
-/* Caixa translúcida atrás do texto */
+/* ===== CAIXA PRINCIPAL (GRID) ===== */
 .text-box {
-  background-color: var(--bg-card); /* fundo translúcido */
-  padding: 15px 25px;
-  border-radius: 8px;
-  text-align: center;
-  backdrop-filter: blur(6px); /* efeito blur por trás */
+  background-color: var(--bg-card);
+  padding: 25px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+
+  max-width: 1200px;
+  width: 100%;
 }
 
-/* Sombras específicas para títulos */
+/* ===== TÍTULO PRINCIPAL ===== */
+.text-box > h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* ===== SECTIONS (CARDS) ===== */
+.text-box section {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-box section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+/* ===== IMAGENS ===== */
+.text-box section figure {
+  margin: 0;
+}
+
+.text-box section img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ===== TEXTOS ===== */
 h1, h2, h3, h4, h5, h6 {
   text-shadow: 3px 3px 8px var(--text-shadow);
+}
+
+.text-box section h2 {
+  color: var(--primary);
+  margin-top: 10px;
+}
+
+.text-box section p {
+  font-size: 0.95rem;
+  color: var(--text-main);
 }
 
 /* ===== FUNDO ESTRELADO 16-BITS ===== */
@@ -73,7 +131,7 @@ body::before {
   animation: starsMove 60s linear infinite;
 }
 
-/* ===== ANIMAÇÃO SUAVE (SPACE GAME) ===== */
+/* ===== ANIMAÇÃO FUNDO ===== */
 @keyframes starsMove {
   from {
     background-position:
@@ -89,4 +147,12 @@ body::before {
       20px 600px,
       center;
   }
+}
+
+/* ===== FOOTER ===== */
+footer {
+  margin-top: 30px;
+  color: var(--text-muted);
+  text-align: center;
+  font-size: 0.85rem;
 }
