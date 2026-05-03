@@ -315,6 +315,62 @@
     transform: scale(1.08) rotateZ(1deg);
     box-shadow: 0 0 25px rgba(255, 193, 7, 0.6), 0 0 10px rgba(255, 193, 7, 0.4) inset;
   }
+
+  /* ========================= */
+/* ZEEKR - PADRÃO ALINHADO */
+/* ========================= */
+
+.experience-zeekr {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.experience-zeekr .carousel {
+  flex: 1 1 350px;
+  max-width: 600px;
+  height: 400px; /* mesmo padrão das outras */
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+.experience-zeekr .carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 🔥 resolve o desalinhamento */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.experience-zeekr .carousel img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.zeekr-text {
+  flex: 1 1 400px;
+  color: #f1f1f1;
+  font-size: 1rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .experience-zeekr {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .experience-zeekr .carousel {
+    height: 250px;
+  }
+}
   
   /* Responsividade */
   @media (max-width: 768px) {
